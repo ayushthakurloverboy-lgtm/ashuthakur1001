@@ -1,0 +1,7 @@
+{
+  "name": "For Vagmii",
+  "description": "A romantic canvas sheet sketch experience featuring hand-drawn crayon and colored pencil drawings with synchronized lyrics for Vagmii.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

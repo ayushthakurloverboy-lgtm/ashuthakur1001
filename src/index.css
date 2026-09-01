@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #eae3d5;
+    color: #2c2825;
+  }
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+.font-crayon {
+  font-family: 'Patrick Hand', 'Caveat', cursive, sans-serif;
+}
+
+.font-romantic {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Paper / Canvas sheet texture overlay */
+.canvas-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+  z-index: 10;
+  mix-blend-mode: multiply;
+}
+
+/* Authentic linen / woven artist paper sheet */
+.bg-canvas-sheet {
+  background-color: #fbf7ee;
+  background-image: 
+    radial-gradient(ellipse at 50% 30%, #fffef8 0%, #f6f0e2 100%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(160, 140, 115, 0.015) 2px, rgba(160, 140, 115, 0.015) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(160, 140, 115, 0.015) 2px, rgba(160, 140, 115, 0.015) 4px);
+}
+
+/* Crayon & pencil text shadows */
+.crayon-text {
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 1px rgba(44, 40, 37, 0.3), 0.5px 0.5px 0px rgba(180, 70, 50, 0.15);
+}
+
+.crayon-highlight {
+  text-shadow: 0 0 2px rgba(194, 75, 56, 0.3);
+}
+
+/* Custom subtle animations */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(0.4deg);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 6s ease-in-out infinite;
+}
+
+
